@@ -3,17 +3,12 @@
 // remove a user when put into a pair
 // add any odd user to a pair to a three
 // finally print out all pairs
-
-const names = [
-  "Mike",
-  "Jyoti",
-  "Consuella",
-  "Rome",
-  "Tai",
-  "Marcella",
-  "Becca",
-];
+const input = require("readline-sync");
 const pairList = [];
+
+const inputNames = input.question("Enter names separated by a comma: ");
+
+const names = inputNames.replace(" ", "").split(",");
 do {
   const pair = Array(2);
   pair[0] = getRandomName(names);
